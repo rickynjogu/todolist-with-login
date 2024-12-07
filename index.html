@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI-Driven Todo List</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side: Todo List -->
+        <div class="todo-container">
+            <h2>My To-Do List</h2>
+            <input type="text" id="todoInput" placeholder="Enter a new todo item" aria-label="New todo item">
+            <button onclick="addTask()" aria-label="Add todo">Add Todo</button>
+            <ul id="todoList"></ul>
+        </div>
+
+        <!-- Right Side: Large Message -->
+        <div class="message-container">
+            <h1>To-Do List</h1>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
+

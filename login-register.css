@@ -1,0 +1,102 @@
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #3498db, #2ecc71); /* Blue gradient background */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundImageTransition 30s infinite; /* 30s duration for the transition */
+    color: #333;
+}
+
+/* Keyframes for background image transition */
+@keyframes backgroundImageTransition {
+    0% {
+        background-image: url('assets/images/img1.jpg'); 
+    }
+    33% {
+        background-image: url('assets/images/img2.jpg');
+    }
+    66% {
+        background-image: url('assets/images/img1.jpg');
+    }
+    100% {
+        background-image: url('assets/images/img2.jpg');
+    }
+}
+
+/* Form Container */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title */
+h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+/* Link Styling */
+p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Alert message */
+.alert {
+    color: #e74c3c;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,149 @@
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #3498db, #2ecc71); /* Blue gradient background */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundImageTransition 30s infinite; /* 30s duration for the transition */
+    color: #333;
+}
+
+/* Keyframes to cycle through images */
+@keyframes backgroundImageTransition {
+    0% {
+        background-image: url('images/img2.jpg'); 
+    }
+    33% {
+        background-image: url('images/img5.jpg');
+    }
+    66% {
+        background-image: url('images/img3.jpg');
+    }
+    100% {
+        background-image: url('images/img4.jpg');
+    }
+}
+
+/* Container for both the To-Do list and message */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Task list container */
+.todo-container {
+    flex: 1;
+    background: #C8E6C9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    height: 80vh; /* Adjust height */
+}
+
+/* Task input field */
+#todoInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Task list styling */
+#todoList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Will animate opacity */
+    transform: translateX(-100%); /* Will animate into view */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Make the task appear once it's added */
+.todo-item.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #e0e0e0; /* Optional background color for completed tasks */
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #ff5252;
+}
+
+/* Complete button styling */
+.complete-btn {
+    background-color: #6bff6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.complete-btn:hover {
+    background-color: #52ff52;
+}
+
+/* Hover effect for buttons */
+button {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Message container (right side) */
+.message-container {
+    flex: 1;
+    text-align: center;
+}
+
+/* Style for large message */
+h1 {
+    font-size: 50px;
+    color: #3498db; /* Blue text */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
